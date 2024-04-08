@@ -1,4 +1,4 @@
-/*https://codepen.io/allistairlee/pen/pVZKxv*/
+
 $(function(){
 	$(".typewriter").typed({
 		strings: ["<u style=\"color: #75ff75;\"<b style=\"color: #98FB98; font-size: 30px; \">1</b></u><br/>Не взрывайся, пожалуйста.",
@@ -105,7 +105,7 @@ $(function(){
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">103</b></u><br/><br/>Вообще зачастую... когда как.",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">104</b></u><br/><br/>Если бы мой батя был отчимом, он бы мне объяснил.",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">105</b></u><br/><br/>Я утром просыпаюсь, загадку услышал. Аж жить захотелось.",
-"<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">106</b></u><br/><br/>Онанизм убивает.<br/><br/>(прим. редактора: а чел со знанием дела по ходу.)",
+"<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">106</b></u><br/><br/>Онанизм убивает.<br/><br/><u style=\"color: #cfe2f3; font-size: 14px;\">(прим. редактора: а чел со знанием дела по ходу.)</u>",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">107</b></u><br/><br/>Мне кажется, если твоя подруга со мной общаться будет, она вообще забудет кто я нахуй.<br/><br/><u style=\"color: #cfe2f3; font-size: 14px;\">(прим. редактора: не, такое уже никогда не забыть.)</u>",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">108</b></u><br/><br/>Что море — вот это обидно...",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">109</b></u><br/><br/>Блять, ты понимаешь, что когда люди поймут что это [педофилия] правда...",
