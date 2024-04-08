@@ -1,0 +1,112 @@
+@font-face {
+	font-family: BolshFont;
+	src: url(bolsh.ttf);
+}
+
+body,html {
+	font-family: sans-serif;
+	display: grid;
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	color: #98FB98;
+	text-align: center;
+	font-family: monospace;
+	font: CourierNew;
+	z-index: 0;
+}
+
+.qtMarks {
+	max-height: 40px;
+}
+
+.qtBlock {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -2;
+}
+
+.card {
+	position: relative;
+	background-color: #111;
+	transition: 0.3s;
+	margin-top: 5%;
+	width: 300px;
+	height: 500px;
+	font-size: 24px;
+	padding: 20px 25px;
+	border-radius: 10px;
+}
+	
+
+.card:before, .card:after {
+	content: "";
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	border-radius: 10px;
+	background: linear-gradient(45deg, #1A2421, #0B6623, #3F704D, #78866B, #4B5320, #4A5D23, #8F9779, #568203, #87A96B, #9DC183, #D8E4BC, #48A860, #74C365, #A8E4A0, #2E8B57, #00A86B);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 100s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.card:after {
+	filter: blur(50px);
+}
+
+.qt {
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	color: #fff;
+	font-family: BolshFont;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.50);
+}
+
+.typewriter {
+}
+
+.typewriter::after {
+	content: "|";
+	display: inline;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
