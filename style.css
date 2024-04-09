@@ -19,7 +19,13 @@ body,html {
 }
 
 .qtMarks {
-	max-height: 40px;
+	max-height: 10%;
+	position: absolute;
+	height: 10%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: left;
+	align-items: top;
 }
 
 .qtBlock {
@@ -37,7 +43,7 @@ body,html {
 
 .card {
 	position: relative;
-	background-color: #111;
+/*	background-color: #111;*/
 	transition: 0.3s;
 	margin-top: 5%;
 	width: 300px;
@@ -45,10 +51,132 @@ body,html {
 	font-size: 24px;
 	padding: 20px 25px;
 	border-radius: 10px;
+	z-index: 5;
+	perspective: 1000px;
 }
-	
 
-.card:before, .card:after {
+.front, .back {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: top;
+	transition: 0.6s;
+	border-radius: 10px;
+}
+
+.front {
+	background-color: #111;
+ 	text-align: center;
+ 	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 7;
+	backface-visibility: hidden;
+}
+
+.back {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	border-radius: 10px;
+	background: radial-gradient(#3F704D, #87A96B, #9DC183, #D8E4BC, #48A860, #74C365, #A8E4A0, #2E8B57, #00A86B);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: steam 100s linear infinite;
+	transform: rotateY(180deg);
+}
+
+/*.back img {
+	left: 3px;
+	top: 3px;
+	position: absolute;
+	height: calc(100% - 6px);
+	width: calc(100% - 6px);
+	border-radius: 12px;
+	filter: invert(60%);
+	backdrop-filter: blur(20px);
+}
+*/
+
+.front_flip {
+	transform: rotateY(180deg);
+}
+
+.back_flip {
+	transform: rotateY(360deg);
+}
+
+.blur {
+	position: absolute;
+	border-radius: 12px;
+	left: 3px;
+	top: 3px;
+	width: calc(100% - 6px);
+	height: calc(100% - 6px);
+	backdrop-filter: blur(60px);
+}
+
+.links {
+	position: absolute;
+	text-align: center;
+	backdrop-filter: invert(100%);
+	border-radius: 12px;
+	left: 3px;
+	top: 3px;
+	width: calc(100% - 6px);
+	height: calc(100% - 6px);
+	display: flex;
+	align-items: top;
+	justify-content: center;
+}
+
+.links ul {
+	margin-top: 40%;
+	margin-right: 10%;
+	list-style-type: none;
+}
+
+.tlgrm {
+	margin: 0;
+	list-style: none;
+	padding: 36px 0 36px 50px;
+	background-image: url(telegram.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 35px;
+	filter: invert(100%);
+	/*box-shadow: 2px 2px 10px rgba(255,255,255,0.50);*/
+}
+
+.stckr {
+	margin: 0;
+	list-style: none;
+	padding: 36px 0 36px 50px;
+	background-image: url(sticker.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 35px;
+	filter: invert(100%);
+	/*box-shadow: 2px 2px 10px rgba(255,255,255,0.50);*/
+}
+
+.links a {
+	text-decoration: none;
+	font-weight: bolder ;
+	color: #111;
+	text-shadow: 2px 2px 10px rgba(255,255,255,0.50);
+	font-family: monospace;
+	font: CourierNew;
+	font-size: 26px;
+}
+
+/*.card:before, */.card:after {
+	transition: 0.6s;
 	content: "";
 	position: absolute;
 	left: -2px;
@@ -59,7 +187,7 @@ body,html {
 	width: calc(100% + 4px);
 	height: calc(100% + 4px);
 	z-index: -1;
-	animation: steam 100s linear infinite;
+	animation: steam 10s linear infinite;
 }
 
 @keyframes steam {
@@ -67,7 +195,7 @@ body,html {
 		background-position: 0 0;
 	}
 	50% {
-		background-position: 400% 0;
+		background-position: 100% 0;
 	}
 	100% {
 		background-position: 0 0;
@@ -75,11 +203,12 @@ body,html {
 }
 
 .card:after {
-	filter: blur(50px);
+	filter: blur(100px);
 }
 
 .qt {
-	margin-top: 5%;
+	position: absolute;
+	margin-top: 35px;
 	margin-left: 5%;
 	margin-right: 5%;
 	color: #fff;
@@ -89,6 +218,7 @@ body,html {
 }
 
 .typewriter {
+	margin-top: 30px;
 }
 
 .typewriter::after {
@@ -109,4 +239,42 @@ body,html {
 	100% {
 		opacity: 1;
 	}
+}
+
+.rotBtn {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin-left: 25px;
+	background-color: #A8E4A0;
+	border-style: none;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.arrow {
+	box-sizing: border-box;
+	/*margin-left: 5px;*/
+	height: 25px;
+	width: 25px;
+	border-style: solid;
+	border-color: #111;
+	border-width: 0px 2px 2px 0px;
+	transform: rotate(-45deg);
+	transition: border-width 50ms ease-in-out, margin-left 50ms ease-in-out, transform 150ms ease-in-out
+}
+
+.rotBtn:active .arrow {
+	border-bottom-width: 3px;
+	border-right-width: 3px;
+	/*margin-left: 8px;*/
+}
+
+.arrow_active {
+	border-bottom-width: 2px;
+	border-right-width: 2px;
+	transform: rotate(135deg);
+	/*margin-left: 10px;*/
 }

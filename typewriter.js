@@ -1,5 +1,11 @@
 
 $(function(){
+	$('.rotBtn').on('click', function(e) {
+		$('.arrow').toggleClass('arrow_active');
+		$('.front').toggleClass('front_flip');
+		$('.back').toggleClass('back_flip');
+/*		$('.card').toggleClass('card_flip');*/
+	});
 	$(".typewriter").typed({
 		strings: ["<u style=\"color: #75ff75;\"<b style=\"color: #98FB98; font-size: 30px; \">1</b></u><br/>Не взрывайся, пожалуйста.",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">2</b></u><br/><br/>Вот когда у тебя ничего нет блять.... а вот когда у тебя всё есть, тогда...",
@@ -80,7 +86,7 @@ $(function(){
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">77</b></u><br/><br/>Вот он [Нейромонах Феофан] гений и смешной, а я...",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">78</b></u><br/><br/>Не вытаскивай свою чёрную хуйню.<br/><br/><u style=\"color: #cfe2f3; font-size: 14px;\">(прим. редактора: оставлю без контекста, потому что понятнее не станет, а хаха эффект кончится.)</u>",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">79</b></u><br/><br/>Если бы ты был таксистом, у тебя бы денег на пиво всегда хватало.",
-"<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">80</b></u><br/><br/>Бля Жаль 600 руб сейчас нет А так купил бы мартини<br/><br/><u style=\"color: #cfe2f3; font-size: 14px;\">(прим. редактора: сохранена орфография. это единственная цитата, которую он не сказал, а написал.)</u>",
+"<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">80</b></u><br/><br/>Бля<br/>Жаль 600 руб<br/>сейчас нет<br/>А так купил бы<br/>мартини<br/><br/><u style=\"color: #cfe2f3; font-size: 14px;\">(прим. редактора: сохранена орфография. это единственная цитата, которую он не сказал, а написал.)</u>",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">81</b></u><br/><br/>Тот самый батя, тот самый Неверов.",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">82</b></u><br/><br/>На улице пей ваще, и иди...",
 "<u style=\"color: #75ff75;\"><b style=\"color: #98FB98; font-size: 30px; \">83</b></u><br/><br/>Короче надо уже думать где повеситься на шнурках.",
